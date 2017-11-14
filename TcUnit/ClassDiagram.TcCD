@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+  <ClassDiagram Name="ClassDiagram" Id="{40e15e1c-f652-493d-ac4d-1d663ead7d18}">
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="ClassDiagram">
+          <l2 n="BreakPointGuids" />
+          <v n="IsActionRemoving">false</v>
+          <v n="ForceRepaintDiagram">false</v>
+          <v n="Documentationdiagram">false</v>
+          <v n="ApplicationGuidForDiagram">{49ee123b-2172-40f4-abd9-9c8096e63c70}</v>
+          <v n="AutomaticLayOutHeightSpace">100</v>
+          <v n="AutomaticLayOutWidthSpace">150</v>
+          <d n="ElementObjects" t="Hashtable" ckt="Guid" cvt="ClassDiagramElement">
+            <v>031bc23b-feb9-4693-8484-d374894ef856</v>
+            <o>
+              <v n="DocumenationName">"FB_Assert"</v>
+              <v n="ExcludedFromBuild">false</v>
+              <v n="PropertiesLoaded">false</v>
+              <d n="Properties" t="Hashtable" />
+              <l n="AttributesArray" t="ArrayList" cet="UMLElementAttribute">
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"bMultiLogFlag"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"BOOL"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{678572ac-ba45-468e-b8b1-c745189e5019}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"bAbortFlag"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"BOOL"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{4637ed85-d752-4ceb-8b62-87ca5e34c350}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"bAbort"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"BOOL"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{d992c152-22c9-4a8c-be52-96d7eb940a0b}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"nState"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"UDINT"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{0c15c51c-e3c4-4f8b-853f-2d1c851358ed}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"sInstanceName"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"STRING(255)"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{ecc2d224-eefc-433d-92ae-78def30b3365}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"sLastInstance"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"STRING(255)"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{7d0a1c70-87e1-44c7-a04c-87ce3a178ebc}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">true</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">true</v>
+                  <v n="bIsMethod">false</v>
+                  <v n="AttribtueName">"sLastMessage"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"STRING(255)"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{621590c7-0c5a-40a0-a592-7bc0b778d50c}</v>
+                  <v n="AttributeStereotype">""</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">false</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">false</v>
+                  <v n="bIsMethod">true</v>
+                  <v n="AttribtueName">"SetAbortFlag"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"BOOL"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{8dd11402-cb03-4242-ad4a-d1bd2959a807}</v>
+                  <v n="AttributeStereotype">"Property"</v>
+                </o>
+                <o>
+                  <v n="bIsAttribute">false</v>
+                  <v n="isInputVar">false</v>
+                  <v n="isOutputVar">false</v>
+                  <v n="isInoutVar">false</v>
+                  <v n="isLocalVar">false</v>
+                  <v n="bIsMethod">true</v>
+                  <v n="AttribtueName">"SetMultiLogFlag"</v>
+                  <v n="AttributeConstraint">""</v>
+                  <v n="AttributeReturnType">"BOOL"</v>
+                  <v n="AttributeParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="AttributeObjectGuid">{adc176e8-8bdb-49ef-8ec2-eb439373a713}</v>
+                  <v n="AttributeStereotype">"Property"</v>
+                </o>
+              </l>
+              <v n="PropertyID">-1</v>
+              <v n="MethodsLoaded">false</v>
+              <d n="MethodList" t="Hashtable" ckt="Guid" cvt="UMLElementMethod">
+                <v>7a31b89e-30b1-4cbf-90e2-72aa770c1ef1</v>
+                <o>
+                  <v n="MethodName">"AreEqualLREAL"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"fExpected"</v>
+                      <v n="ParameterType">"LREAL"</v>
+                      <v n="ParameterParent">{7a31b89e-30b1-4cbf-90e2-72aa770c1ef1}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"fActual"</v>
+                      <v n="ParameterType">"LREAL"</v>
+                      <v n="ParameterParent">{7a31b89e-30b1-4cbf-90e2-72aa770c1ef1}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"fTolerance"</v>
+                      <v n="ParameterType">"LREAL"</v>
+                      <v n="ParameterParent">{7a31b89e-30b1-4cbf-90e2-72aa770c1ef1}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{7a31b89e-30b1-4cbf-90e2-72aa770c1ef1}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{7a31b89e-30b1-4cbf-90e2-72aa770c1ef1}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>b1b1008a-83ff-403a-bf22-ac4c3baf978d</v>
+                <o>
+                  <v n="MethodName">"IsFalse"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"bCondition"</v>
+                      <v n="ParameterType">"BOOL"</v>
+                      <v n="ParameterParent">{b1b1008a-83ff-403a-bf22-ac4c3baf978d}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{b1b1008a-83ff-403a-bf22-ac4c3baf978d}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{b1b1008a-83ff-403a-bf22-ac4c3baf978d}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>d44b1c59-2ce6-4073-b2f6-a61898012d5b</v>
+                <o>
+                  <v n="MethodName">"AreEqualBOOL"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"bExpected"</v>
+                      <v n="ParameterType">"BOOL"</v>
+                      <v n="ParameterParent">{d44b1c59-2ce6-4073-b2f6-a61898012d5b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"bActual"</v>
+                      <v n="ParameterType">"BOOL"</v>
+                      <v n="ParameterParent">{d44b1c59-2ce6-4073-b2f6-a61898012d5b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{d44b1c59-2ce6-4073-b2f6-a61898012d5b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{d44b1c59-2ce6-4073-b2f6-a61898012d5b}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>6eb7897d-b291-453c-ad26-24e754a0152a</v>
+                <o>
+                  <v n="MethodName">"AreEqualLWORD"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"LWORD"</v>
+                      <v n="ParameterParent">{6eb7897d-b291-453c-ad26-24e754a0152a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"LWORD"</v>
+                      <v n="ParameterParent">{6eb7897d-b291-453c-ad26-24e754a0152a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{6eb7897d-b291-453c-ad26-24e754a0152a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{6eb7897d-b291-453c-ad26-24e754a0152a}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>bdda172d-eabc-4406-8310-85113fb9e02b</v>
+                <o>
+                  <v n="MethodName">"PrintFailed"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" />
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{bdda172d-eabc-4406-8310-85113fb9e02b}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>4fbed08b-bb07-4a74-a61c-a264c218851b</v>
+                <o>
+                  <v n="MethodName">"AreEqualWORD"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"WORD"</v>
+                      <v n="ParameterParent">{4fbed08b-bb07-4a74-a61c-a264c218851b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"WORD"</v>
+                      <v n="ParameterParent">{4fbed08b-bb07-4a74-a61c-a264c218851b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{4fbed08b-bb07-4a74-a61c-a264c218851b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{4fbed08b-bb07-4a74-a61c-a264c218851b}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>7b2271f5-bffa-4da9-8f73-f7980f243ad3</v>
+                <o>
+                  <v n="MethodName">"AreEqualGUID"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"stExpected"</v>
+                      <v n="ParameterType">"GUID"</v>
+                      <v n="ParameterParent">{7b2271f5-bffa-4da9-8f73-f7980f243ad3}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"stActual"</v>
+                      <v n="ParameterType">"GUID"</v>
+                      <v n="ParameterParent">{7b2271f5-bffa-4da9-8f73-f7980f243ad3}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{7b2271f5-bffa-4da9-8f73-f7980f243ad3}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{7b2271f5-bffa-4da9-8f73-f7980f243ad3}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>0d15c69d-7a8d-45b0-96c0-a32da4a6f267</v>
+                <o>
+                  <v n="MethodName">"ChangeState"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nNextState"</v>
+                      <v n="ParameterType">"UINT"</v>
+                      <v n="ParameterParent">{0d15c69d-7a8d-45b0-96c0-a32da4a6f267}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{0d15c69d-7a8d-45b0-96c0-a32da4a6f267}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>10be9f05-e524-4c93-9a4d-ef0f2e4bc1b8</v>
+                <o>
+                  <v n="MethodName">"AreEqualINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"INT"</v>
+                      <v n="ParameterParent">{10be9f05-e524-4c93-9a4d-ef0f2e4bc1b8}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"INT"</v>
+                      <v n="ParameterParent">{10be9f05-e524-4c93-9a4d-ef0f2e4bc1b8}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{10be9f05-e524-4c93-9a4d-ef0f2e4bc1b8}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{10be9f05-e524-4c93-9a4d-ef0f2e4bc1b8}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>93ebbb7a-d418-40a8-a3c0-cd105fc25fa2</v>
+                <o>
+                  <v n="MethodName">"AreEqualDWORD"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"DWORD"</v>
+                      <v n="ParameterParent">{93ebbb7a-d418-40a8-a3c0-cd105fc25fa2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"DWORD"</v>
+                      <v n="ParameterParent">{93ebbb7a-d418-40a8-a3c0-cd105fc25fa2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{93ebbb7a-d418-40a8-a3c0-cd105fc25fa2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{93ebbb7a-d418-40a8-a3c0-cd105fc25fa2}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>31126b35-158f-4667-8685-e0b86594a291</v>
+                <o>
+                  <v n="MethodName">"PrintAssert"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"sActual"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{31126b35-158f-4667-8685-e0b86594a291}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sExpected"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{31126b35-158f-4667-8685-e0b86594a291}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sTolerance"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{31126b35-158f-4667-8685-e0b86594a291}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{31126b35-158f-4667-8685-e0b86594a291}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sType"</v>
+                      <v n="ParameterType">"STRING(20)"</v>
+                      <v n="ParameterParent">{31126b35-158f-4667-8685-e0b86594a291}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{31126b35-158f-4667-8685-e0b86594a291}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>6b6647f6-5e4b-473e-8c17-b4dadfd0f227</v>
+                <o>
+                  <v n="MethodName">"IsTrue"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"bCondition"</v>
+                      <v n="ParameterType">"BOOL"</v>
+                      <v n="ParameterParent">{6b6647f6-5e4b-473e-8c17-b4dadfd0f227}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{6b6647f6-5e4b-473e-8c17-b4dadfd0f227}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{6b6647f6-5e4b-473e-8c17-b4dadfd0f227}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>04c1eb1c-d4a7-404e-9d5d-4b759665f1b2</v>
+                <o>
+                  <v n="MethodName">"Succeeded"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"hResult"</v>
+                      <v n="ParameterType">"HRESULT"</v>
+                      <v n="ParameterParent">{04c1eb1c-d4a7-404e-9d5d-4b759665f1b2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{04c1eb1c-d4a7-404e-9d5d-4b759665f1b2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{04c1eb1c-d4a7-404e-9d5d-4b759665f1b2}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>f06f6cd0-e3ef-4952-980e-82db05199b52</v>
+                <o>
+                  <v n="MethodName">"PrintResult"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">""</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"sActual"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{f06f6cd0-e3ef-4952-980e-82db05199b52}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sExpected"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{f06f6cd0-e3ef-4952-980e-82db05199b52}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sTolerance"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{f06f6cd0-e3ef-4952-980e-82db05199b52}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{f06f6cd0-e3ef-4952-980e-82db05199b52}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sType"</v>
+                      <v n="ParameterType">"STRING(20)"</v>
+                      <v n="ParameterParent">{f06f6cd0-e3ef-4952-980e-82db05199b52}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{f06f6cd0-e3ef-4952-980e-82db05199b52}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>5baeb024-277b-48d8-b4b4-7c6fea616640</v>
+                <o>
+                  <v n="MethodName">"StateMachineError"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" />
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{5baeb024-277b-48d8-b4b4-7c6fea616640}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>81d36fe2-891c-44ee-aea7-d2fe5a62a600</v>
+                <o>
+                  <v n="MethodName">"AreEqualUSINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"USINT"</v>
+                      <v n="ParameterParent">{81d36fe2-891c-44ee-aea7-d2fe5a62a600}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"USINT"</v>
+                      <v n="ParameterParent">{81d36fe2-891c-44ee-aea7-d2fe5a62a600}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{81d36fe2-891c-44ee-aea7-d2fe5a62a600}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{81d36fe2-891c-44ee-aea7-d2fe5a62a600}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>fc81ea26-f029-4f96-88d7-2f83094046d0</v>
+                <o>
+                  <v n="MethodName">"AreEqualDINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"DINT"</v>
+                      <v n="ParameterParent">{fc81ea26-f029-4f96-88d7-2f83094046d0}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"DINT"</v>
+                      <v n="ParameterParent">{fc81ea26-f029-4f96-88d7-2f83094046d0}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{fc81ea26-f029-4f96-88d7-2f83094046d0}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{fc81ea26-f029-4f96-88d7-2f83094046d0}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>2e246e7d-f99a-44b5-a8e9-e443f0a85e99</v>
+                <o>
+                  <v n="MethodName">"AreEqualREAL"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"fExpected"</v>
+                      <v n="ParameterType">"REAL"</v>
+                      <v n="ParameterParent">{2e246e7d-f99a-44b5-a8e9-e443f0a85e99}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"fActual"</v>
+                      <v n="ParameterType">"REAL"</v>
+                      <v n="ParameterParent">{2e246e7d-f99a-44b5-a8e9-e443f0a85e99}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"fTolerance"</v>
+                      <v n="ParameterType">"REAL"</v>
+                      <v n="ParameterParent">{2e246e7d-f99a-44b5-a8e9-e443f0a85e99}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{2e246e7d-f99a-44b5-a8e9-e443f0a85e99}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{2e246e7d-f99a-44b5-a8e9-e443f0a85e99}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>42fabced-fe99-4a22-b5e1-6009d93a6ca2</v>
+                <o>
+                  <v n="MethodName">"AreEqualSTRING"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"sExpected"</v>
+                      <v n="ParameterType">"STRING(255)"</v>
+                      <v n="ParameterParent">{42fabced-fe99-4a22-b5e1-6009d93a6ca2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sActual"</v>
+                      <v n="ParameterType">"STRING(255)"</v>
+                      <v n="ParameterParent">{42fabced-fe99-4a22-b5e1-6009d93a6ca2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{42fabced-fe99-4a22-b5e1-6009d93a6ca2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{42fabced-fe99-4a22-b5e1-6009d93a6ca2}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>0299393b-cb5c-461d-85b2-7dc1f6aae01c</v>
+                <o>
+                  <v n="MethodName">"PrintPassed"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" />
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{0299393b-cb5c-461d-85b2-7dc1f6aae01c}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>1cea6302-03cd-47bd-b83e-c1e0180f9af2</v>
+                <o>
+                  <v n="MethodName">"AreEqualULINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"ULINT"</v>
+                      <v n="ParameterParent">{1cea6302-03cd-47bd-b83e-c1e0180f9af2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"ULINT"</v>
+                      <v n="ParameterParent">{1cea6302-03cd-47bd-b83e-c1e0180f9af2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{1cea6302-03cd-47bd-b83e-c1e0180f9af2}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{1cea6302-03cd-47bd-b83e-c1e0180f9af2}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>cfca1e38-5fd3-4189-bd0a-aa3debf07ca0</v>
+                <o>
+                  <v n="MethodName">"Failed"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"hResult"</v>
+                      <v n="ParameterType">"HRESULT"</v>
+                      <v n="ParameterParent">{cfca1e38-5fd3-4189-bd0a-aa3debf07ca0}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{cfca1e38-5fd3-4189-bd0a-aa3debf07ca0}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{cfca1e38-5fd3-4189-bd0a-aa3debf07ca0}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>18b3ef9b-afc7-4432-8aed-3626d019f492</v>
+                <o>
+                  <v n="MethodName">"AreEqualLTIME"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"tExp"</v>
+                      <v n="ParameterType">"LTIME"</v>
+                      <v n="ParameterParent">{18b3ef9b-afc7-4432-8aed-3626d019f492}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"tAct"</v>
+                      <v n="ParameterType">"LTIME"</v>
+                      <v n="ParameterParent">{18b3ef9b-afc7-4432-8aed-3626d019f492}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"tTol"</v>
+                      <v n="ParameterType">"LTIME"</v>
+                      <v n="ParameterParent">{18b3ef9b-afc7-4432-8aed-3626d019f492}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{18b3ef9b-afc7-4432-8aed-3626d019f492}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{18b3ef9b-afc7-4432-8aed-3626d019f492}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>0fd87f6c-0a1b-461a-bcda-5f0039380d6a</v>
+                <o>
+                  <v n="MethodName">"AreEqualLINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"LINT"</v>
+                      <v n="ParameterParent">{0fd87f6c-0a1b-461a-bcda-5f0039380d6a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"LINT"</v>
+                      <v n="ParameterParent">{0fd87f6c-0a1b-461a-bcda-5f0039380d6a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{0fd87f6c-0a1b-461a-bcda-5f0039380d6a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{0fd87f6c-0a1b-461a-bcda-5f0039380d6a}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>41da78ec-7c0c-49ca-9f8f-5f32fae9eb7c</v>
+                <o>
+                  <v n="MethodName">"AreEqualHRESULT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"hResultExp"</v>
+                      <v n="ParameterType">"hResult"</v>
+                      <v n="ParameterParent">{41da78ec-7c0c-49ca-9f8f-5f32fae9eb7c}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"hResultAct"</v>
+                      <v n="ParameterType">"hResult"</v>
+                      <v n="ParameterParent">{41da78ec-7c0c-49ca-9f8f-5f32fae9eb7c}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{41da78ec-7c0c-49ca-9f8f-5f32fae9eb7c}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{41da78ec-7c0c-49ca-9f8f-5f32fae9eb7c}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>3db58974-551a-4513-9f3d-0c3562d1986a</v>
+                <o>
+                  <v n="MethodName">"AreEqualTIME"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"tExp"</v>
+                      <v n="ParameterType">"TIME"</v>
+                      <v n="ParameterParent">{3db58974-551a-4513-9f3d-0c3562d1986a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"tAct"</v>
+                      <v n="ParameterType">"TIME"</v>
+                      <v n="ParameterParent">{3db58974-551a-4513-9f3d-0c3562d1986a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"tTol"</v>
+                      <v n="ParameterType">"TIME"</v>
+                      <v n="ParameterParent">{3db58974-551a-4513-9f3d-0c3562d1986a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{3db58974-551a-4513-9f3d-0c3562d1986a}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{3db58974-551a-4513-9f3d-0c3562d1986a}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>9bfc6ef7-d69e-441e-8275-1471afeeaeaa</v>
+                <o>
+                  <v n="MethodName">"AreEqualSINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"SINT"</v>
+                      <v n="ParameterParent">{9bfc6ef7-d69e-441e-8275-1471afeeaeaa}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"SINT"</v>
+                      <v n="ParameterParent">{9bfc6ef7-d69e-441e-8275-1471afeeaeaa}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{9bfc6ef7-d69e-441e-8275-1471afeeaeaa}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{9bfc6ef7-d69e-441e-8275-1471afeeaeaa}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>28d962b5-6de4-4c23-81c6-e579f356280b</v>
+                <o>
+                  <v n="MethodName">"AreEqualMEM"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"pExpected"</v>
+                      <v n="ParameterType">"PVOID"</v>
+                      <v n="ParameterParent">{28d962b5-6de4-4c23-81c6-e579f356280b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"pActual"</v>
+                      <v n="ParameterType">"PVOID"</v>
+                      <v n="ParameterParent">{28d962b5-6de4-4c23-81c6-e579f356280b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nSize"</v>
+                      <v n="ParameterType">"UDINT"</v>
+                      <v n="ParameterParent">{28d962b5-6de4-4c23-81c6-e579f356280b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{28d962b5-6de4-4c23-81c6-e579f356280b}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{28d962b5-6de4-4c23-81c6-e579f356280b}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>1c8bec7e-1031-4d81-8c8a-b8514f8f4b70</v>
+                <o>
+                  <v n="MethodName">"AreEqualUDINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"UDINT"</v>
+                      <v n="ParameterParent">{1c8bec7e-1031-4d81-8c8a-b8514f8f4b70}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"UDINT"</v>
+                      <v n="ParameterParent">{1c8bec7e-1031-4d81-8c8a-b8514f8f4b70}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{1c8bec7e-1031-4d81-8c8a-b8514f8f4b70}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{1c8bec7e-1031-4d81-8c8a-b8514f8f4b70}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>7e025b50-0dbd-446f-90c0-7afb77e57297</v>
+                <o>
+                  <v n="MethodName">"Fail"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{7e025b50-0dbd-446f-90c0-7afb77e57297}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{7e025b50-0dbd-446f-90c0-7afb77e57297}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>629cb228-5ec4-43b7-a7a1-f019f5a57138</v>
+                <o>
+                  <v n="MethodName">"AreEqualUINT"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"UINT"</v>
+                      <v n="ParameterParent">{629cb228-5ec4-43b7-a7a1-f019f5a57138}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"UINT"</v>
+                      <v n="ParameterParent">{629cb228-5ec4-43b7-a7a1-f019f5a57138}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{629cb228-5ec4-43b7-a7a1-f019f5a57138}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{629cb228-5ec4-43b7-a7a1-f019f5a57138}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>f8e6cfc0-de5f-4c64-affd-39449b67dca4</v>
+                <o>
+                  <v n="MethodName">"AreEqualBYTE"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"BOOL"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"nExpected"</v>
+                      <v n="ParameterType">"BYTE"</v>
+                      <v n="ParameterParent">{f8e6cfc0-de5f-4c64-affd-39449b67dca4}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"nActual"</v>
+                      <v n="ParameterType">"BYTE"</v>
+                      <v n="ParameterParent">{f8e6cfc0-de5f-4c64-affd-39449b67dca4}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sMessage"</v>
+                      <v n="ParameterType">"STRING(80)"</v>
+                      <v n="ParameterParent">{f8e6cfc0-de5f-4c64-affd-39449b67dca4}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{f8e6cfc0-de5f-4c64-affd-39449b67dca4}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+                <v>03599322-da59-44a7-b0e2-8c5bb13b3541</v>
+                <o>
+                  <v n="MethodName">"GetState"</v>
+                  <v n="MethodBreakPointActive">false</v>
+                  <v n="MethodReturnType">"UDINT"</v>
+                  <l n="MethodParameter" t="ArrayList" cet="UMLMethodParameter">
+                    <o>
+                      <v n="ParameterName">"sInstanceName"</v>
+                      <v n="ParameterType">"STRING(255)"</v>
+                      <v n="ParameterParent">{03599322-da59-44a7-b0e2-8c5bb13b3541}</v>
+                      <v n="ParameterTransfer">"in"</v>
+                    </o>
+                    <o>
+                      <v n="ParameterName">"sInstanceName"</v>
+                      <v n="ParameterType">"STRING(255)"</v>
+                      <v n="ParameterParent">{03599322-da59-44a7-b0e2-8c5bb13b3541}</v>
+                      <v n="ParameterTransfer">"out"</v>
+                    </o>
+                  </l>
+                  <v n="MethodParent">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+                  <v n="MethodObjectGuid">{03599322-da59-44a7-b0e2-8c5bb13b3541}</v>
+                  <v n="MethodStereotype">""</v>
+                  <v n="MethodParameterLength">20</v>
+                  <v n="MethodParameterTooLong">false</v>
+                </o>
+              </d>
+              <v n="MethodID">-1</v>
+              <v n="ActivityID">-1</v>
+              <v n="IecObjectSemantic">2</v>
+              <d n="MethodStereotypContainer" t="Hashtable" />
+              <o n="ElementVisualisation" t="ClassElementVisualisation">
+                <v n="ShowAttributes">false</v>
+                <v n="ShowMethods">false</v>
+                <a n="DockingPopulation" cet="Int32">AAAAAAAAAAAAAAAAAAAAAA==</a>
+                <v n="ColumnIndex">0</v>
+                <v n="RowIndex">0</v>
+                <v n="RepresentedElement">1</v>
+                <v n="IsElementVisible">true</v>
+                <v n="TopPosition">268</v>
+                <v n="LeftPosition">265</v>
+                <v n="WidthValue">100</v>
+                <v n="MinWidthValue">0</v>
+                <v n="Height">71</v>
+                <v n="MinHeight">0</v>
+                <v n="AutomaticLayout">true</v>
+                <d n="DockingPoints" t="Hashtable" />
+              </o>
+              <n n="StereotypeContainer" />
+              <v n="LibraryPath">""</v>
+              <v n="HasGraphicalRepresentation">true</v>
+              <v n="bIsVisualisationChanged">false</v>
+              <v n="IsType" t="UMLType">UMLClassElement</v>
+              <v n="_MaxDoCycleCalls" t="Int16">32767</v>
+              <v n="DefaultCellSizeX">70</v>
+              <v n="DefaultCellSizeY">47</v>
+              <v n="IsDocumentation">false</v>
+              <v n="Area">{00000000-0000-0000-0000-000000000000}</v>
+              <v n="ParsedMethods">false</v>
+              <v n="ParsedProperties">false</v>
+              <v n="GeneratorId">0</v>
+              <v n="UserDefined">true</v>
+              <v n="ElementID">1</v>
+              <v n="ElementObjectGuid">{031bc23b-feb9-4693-8484-d374894ef856}</v>
+              <v n="ParentGuid">{40e15e1c-f652-493d-ac4d-1d663ead7d18}</v>
+              <v n="ContainerGuid">{00000000-0000-0000-0000-000000000000}</v>
+              <v n="ShowedStereotype">{00000000-0000-0000-0000-000000000000}</v>
+              <v n="ReplacewithImage">false</v>
+              <v n="AutomaticLayout">true</v>
+              <v n="PositionCounter">1L</v>
+              <v n="UMLPosition">-1L</v>
+              <v n="IsModified">false</v>
+              <v n="ARGBElementColor">0</v>
+              <v n="ZOrder">3U</v>
+            </o>
+          </d>
+          <v n="FirstPaint">true</v>
+          <v n="NextElementID">1</v>
+          <d n="UMLRelationObjects" t="Hashtable" />
+          <v n="NextRelationID">0</v>
+          <v n="DefaultAutomaticLayout">false</v>
+          <o n="ClassDiagrammProperties" t="UMLDiagramProperties">
+            <v n="ArrayOfPointerToClassPresentation" t="RelationTypes">Association</v>
+            <v n="ArrayOfClassPresentation" t="RelationTypes">Composition</v>
+            <v n="ArrayOfInterfacePresentation" t="RelationTypes">Association</v>
+            <v n="ArrayOfInterfaceAggregationPresentation" t="RelationTypes">Aggregation</v>
+            <v n="PointerToClassPresentation" t="RelationTypes">Association</v>
+            <v n="ClassPresentation" t="RelationTypes">Composition</v>
+            <v n="InterfacePresentation" t="RelationTypes">Association</v>
+            <v n="InterfaceAggregationPresentation" t="RelationTypes">Aggregation</v>
+            <v n="ShowRoleNames">true</v>
+            <v n="ShowCardinalities">true</v>
+            <v n="ShowRelationNames">true</v>
+            <v n="ShowAttributesinClasses">false</v>
+            <v n="ShowMethodsInClasses">false</v>
+            <v n="ParametersMaximumLength">20</v>
+          </o>
+          <v n="IsFastStateDiagram">false</v>
+          <l n="StereoTypeProfile" t="ArrayList" />
+          <v n="RelationRoleID">0</v>
+          <d n="PositionSerialization" t="Hashtable" />
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="Boolean">System.Boolean</Type>
+        <Type n="ClassDiagram">{55fce3f2-a3ee-4e8d-9ae0-7ce1efc6092b}</Type>
+        <Type n="ClassDiagramElement">{351947c5-df11-4e62-bac4-ec0994b801eb}</Type>
+        <Type n="ClassElementVisualisation">{5171a014-a7d9-42a9-8696-2446328d10a8}</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="Hashtable">System.Collections.Hashtable</Type>
+        <Type n="Int16">System.Int16</Type>
+        <Type n="Int32">System.Int32</Type>
+        <Type n="Int64">System.Int64</Type>
+        <Type n="RelationTypes">{f5146002-a332-47c0-9d9a-7997d539e6a9}</Type>
+        <Type n="String">System.String</Type>
+        <Type n="UInt32">System.UInt32</Type>
+        <Type n="UMLDiagramProperties">{71bc64fb-98e8-4f9a-b2ec-0da66cfaa0a0}</Type>
+        <Type n="UMLElementAttribute">{c3a7e8fe-23f0-4537-9727-98242d9e6a53}</Type>
+        <Type n="UMLElementMethod">{75919824-d3c5-4f27-b307-1f6e74481699}</Type>
+        <Type n="UMLMethodParameter">{63b3a515-b008-4c28-9006-0c43e3460883}</Type>
+        <Type n="UMLType">{0197b136-405a-42ee-bb27-fd08b621d0cf}</Type>
+      </TypeList>
+    </XmlArchive>
+  </ClassDiagram>
+</TcPlcObject>

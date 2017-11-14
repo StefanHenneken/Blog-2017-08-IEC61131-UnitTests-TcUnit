@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+  <POU Name="FB_Assert" Id="{031bc23b-feb9-4693-8484-d374894ef856}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_Assert
+VAR
+	bMultipleLogFlag	: BOOL;
+	bAbortAfterFailFlag	: BOOL;
+	bAbort				: BOOL;
+	nState				: UDINT;
+	sInstanceName		: STRING[255];
+	sLastInstance		: STRING[255];
+	sLastMessage		: STRING[255];
+	nLastState			: UDINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="AbortAfterFail" Id="{8dd11402-cb03-4242-ad4a-d1bd2959a807}">
+      <Declaration><![CDATA[{attribute 'monitoring':='call'}
+PROPERTY PUBLIC AbortAfterFail : BOOL]]></Declaration>
+      <Set Name="Set" Id="{68f81357-471b-4471-96ab-9048bf9957c8}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[THIS^.bAbortAfterFailFlag := AbortAfterFail;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="AreEqualBOOL" Id="{d44b1c59-2ce6-4073-b2f6-a61898012d5b}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualBOOL : BOOL
+VAR_INPUT
+	bExpected	: BOOL;
+	bActual		: BOOL;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (bExpected <> bActual) THEN
+	PrintFailed(TO_STRING(bActual), TO_STRING(bExpected), '', sMessage, 'BOOL');
+	AreEqualBOOL := FALSE;
+ELSE
+	AreEqualBOOL := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualBYTE" Id="{f8e6cfc0-de5f-4c64-affd-39449b67dca4}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualBYTE : BOOL
+VAR_INPUT
+	nExpected	: BYTE;
+	nActual		: BYTE;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(CONCAT('16#', DWORD_TO_HEXSTR(TO_DWORD(nActual), 8, FALSE)),
+				CONCAT('16#', DWORD_TO_HEXSTR(TO_DWORD(nExpected), 8, FALSE)),
+				'',
+				sMessage,
+				'BYTE');
+	AreEqualBYTE := FALSE;
+ELSE
+	AreEqualBYTE := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualDINT" Id="{fc81ea26-f029-4f96-88d7-2f83094046d0}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualDINT : BOOL
+VAR_INPUT
+	nExpected	: DINT;
+	nActual		: DINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'DINT');
+	AreEqualDINT := FALSE;
+ELSE
+	AreEqualDINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualDWORD" Id="{93ebbb7a-d418-40a8-a3c0-cd105fc25fa2}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualDWORD : BOOL
+VAR_INPUT
+	nExpected	: DWORD;
+	nActual		: DWORD;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(CONCAT('16#', DWORD_TO_HEXSTR(nActual, 8, FALSE)),
+				CONCAT('16#', DWORD_TO_HEXSTR(nExpected, 8, FALSE)),
+				'',
+				sMessage,
+				'DWORD');
+	AreEqualDWORD := FALSE;
+ELSE
+	AreEqualDWORD := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualGUID" Id="{7b2271f5-bffa-4da9-8f73-f7980f243ad3}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualGUID : BOOL
+VAR_INPUT
+	stExpected	: GUID;
+	stActual	: GUID;
+	sMessage	: STRING(80);
+END_VAR
+VAR
+	nIdx		: BYTE;
+	bEqual		: BOOL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bEqual := TRUE;
+bEqual := bEqual AND stExpected.Data1 = stActual.Data1;
+bEqual := bEqual AND stExpected.Data2 = stActual.Data2;
+bEqual := bEqual AND stExpected.Data3 = stActual.Data3;
+
+FOR nIdx := 0 TO 7 DO
+	bEqual := bEqual AND (stExpected.Data4[nIdx] = stActual.Data4[nIdx]);
+END_FOR
+
+IF (NOT bEqual) THEN
+	PrintFailed('', '', '', sMessage, 'GUID');
+	AreEqualGUID := FALSE;
+ELSE
+	AreEqualGUID := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualHRESULT" Id="{41da78ec-7c0c-49ca-9f8f-5f32fae9eb7c}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualHRESULT : BOOL
+VAR_INPUT
+	hResultExp	: hResult;
+	hResultAct	: hResult;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (hResultExp <> hResultAct) THEN
+	PrintFailed(CONCAT('16#', DWORD_TO_HEXSTR(TO_DWORD(hResultAct), 8, FALSE)),
+				CONCAT('16#', DWORD_TO_HEXSTR(TO_DWORD(hResultExp), 8, FALSE)),
+				'',
+				sMessage,
+				'HRESULT');
+	AreEqualHRESULT := FALSE;
+ELSE
+	AreEqualHRESULT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualINT" Id="{10be9f05-e524-4c93-9a4d-ef0f2e4bc1b8}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualINT : BOOL
+VAR_INPUT
+	nExpected	: INT;
+	nActual		: INT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'INT');
+	AreEqualINT := FALSE;
+ELSE
+	AreEqualINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualLINT" Id="{0fd87f6c-0a1b-461a-bcda-5f0039380d6a}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualLINT : BOOL
+VAR_INPUT
+	nExpected	: LINT;
+	nActual		: LINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'LINT');
+	AreEqualLINT := FALSE;
+ELSE
+	AreEqualLINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualLREAL" Id="{7a31b89e-30b1-4cbf-90e2-72aa770c1ef1}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualLREAL : BOOL
+VAR_INPUT
+	fExpected	: LREAL;
+	fActual		: LREAL;
+	fTolerance	: LREAL;
+	sMessage	: STRING(80);
+END_VAR
+VAR
+	fbFormatActual		: FB_FormatString;
+	fbFormatExpected	: FB_FormatString;
+	sFormatOption		: STRING(20);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (ABS(fExpected-fActual) > fTolerance) THEN
+	IF (fTolerance >= 0.1) THEN
+		sFormatOption := '%4.1F';
+	ELSIF (fTolerance >= 0.01) THEN
+		sFormatOption := '%4.2F';
+	ELSIF (fTolerance >= 0.001) THEN
+		sFormatOption := '%4.3F';
+	ELSIF (fTolerance >= 0.000001) THEN
+		sFormatOption := '%4.6F';
+	ELSE
+		sFormatOption := '%4.9F';
+	END_IF
+
+	fbFormatActual(sFormat := sFormatOption, arg1 := F_LREAL(fActual));
+	fbFormatExpected(sFormat := sFormatOption, arg1 := F_LREAL(fExpected));
+
+	PrintFailed(fbFormatActual.sOut, fbFormatExpected.sOut, TO_STRING(fTolerance), sMessage, 'LREAL');
+	AreEqualLREAL := FALSE;
+ELSE
+	AreEqualLREAL := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualLTIME" Id="{18b3ef9b-afc7-4432-8aed-3626d019f492}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualLTIME : BOOL
+VAR_INPUT
+	tExpected		: LTIME;
+	tActual			: LTIME;
+	tTolerance		: LTIME;
+	sMessage		: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (tActual < (tExpected - tTolerance)) OR (tActual > (tExpected + tTolerance)) THEN
+	PrintFailed(TO_STRING(tActual), TO_STRING(tExpected), TO_STRING(tTolerance), sMessage, 'LTIME');
+	AreEqualLTIME := FALSE;
+ELSE
+	AreEqualLTIME := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualLWORD" Id="{6eb7897d-b291-453c-ad26-24e754a0152a}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualLWORD : BOOL
+VAR_INPUT
+	nExpected	: LWORD;
+	nActual		: LWORD;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(CONCAT('16#', LWORD_TO_HEXSTR(nActual, 16, FALSE)),
+				CONCAT('16#', LWORD_TO_HEXSTR(nExpected, 16, FALSE)),
+				'',
+				sMessage,
+				'LWORD');
+	AreEqualLWORD := FALSE;
+ELSE
+	AreEqualLWORD := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualMEM" Id="{28d962b5-6de4-4c23-81c6-e579f356280b}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualMEM : BOOL
+VAR_INPUT
+	pExpected	: PVOID;
+	pActual		: PVOID;
+	nSize		: UDINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (MEMCMP(pExpected, pActual, nSize) <> 0) THEN
+	PrintFailed('', '', '', sMessage, 'MEM');
+	AreEqualMEM := FALSE;
+ELSE
+	AreEqualMEM := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualREAL" Id="{2e246e7d-f99a-44b5-a8e9-e443f0a85e99}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualREAL : BOOL
+VAR_INPUT
+	fExpected	: REAL;
+	fActual		: REAL;
+	fTolerance	: REAL;
+	sMessage	: STRING(80);
+END_VAR
+VAR
+	fbFormatActual		: FB_FormatString;
+	fbFormatExpected	: FB_FormatString;
+	sFormatOption		: STRING(20);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (ABS(fExpected-fActual) > fTolerance) THEN
+	IF (fTolerance >= 0.1) THEN
+		sFormatOption := '%4.1F';
+	ELSIF (fTolerance >= 0.01) THEN
+		sFormatOption := '%4.2F';
+	ELSIF (fTolerance >= 0.001) THEN
+		sFormatOption := '%4.3F';
+	ELSIF (fTolerance >= 0.000001) THEN
+		sFormatOption := '%4.6F';
+	ELSE
+		sFormatOption := '%4.9F';
+	END_IF
+
+	fbFormatActual(sFormat := sFormatOption, arg1 := F_Real(fActual));
+	fbFormatExpected(sFormat := sFormatOption, arg1 := F_Real(fExpected));
+
+	PrintFailed(fbFormatActual.sOut, fbFormatExpected.sOut, TO_STRING(fTolerance), sMessage, 'REAL');
+	AreEqualREAL := FALSE;
+ELSE
+	AreEqualREAL := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualSINT" Id="{9bfc6ef7-d69e-441e-8275-1471afeeaeaa}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualSINT : BOOL
+VAR_INPUT
+	nExpected	: SINT;
+	nActual		: SINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'SINT');
+	AreEqualSINT := FALSE;
+ELSE
+	AreEqualSINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualSTRING" Id="{42fabced-fe99-4a22-b5e1-6009d93a6ca2}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualSTRING : BOOL
+VAR_INPUT
+	sExpected	: STRING(255);
+	sActual		: STRING(255);
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (sExpected <> sActual) THEN
+	PrintFailed(sActual, sExpected, '', sMessage, 'STRING');
+	AreEqualSTRING := FALSE;
+ELSE
+	AreEqualSTRING := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualTIME" Id="{3db58974-551a-4513-9f3d-0c3562d1986a}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualTIME : BOOL
+VAR_INPUT
+	tExpected		: TIME;
+	tActual			: TIME;
+	tTolerance		: TIME;
+	sMessage		: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (tActual < (tExpected - tTolerance)) OR (tActual > (tExpected + tTolerance)) THEN
+	PrintFailed(TO_STRING(tActual), TO_STRING(tExpected), TO_STRING(tTolerance), sMessage, 'TIME');
+	AreEqualTIME := FALSE;
+ELSE
+	AreEqualTIME := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualUDINT" Id="{1c8bec7e-1031-4d81-8c8a-b8514f8f4b70}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualUDINT : BOOL
+VAR_INPUT
+	nExpected	: UDINT;
+	nActual		: UDINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'UDINT');
+	AreEqualUDINT := FALSE;
+ELSE
+	AreEqualUDINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualUINT" Id="{629cb228-5ec4-43b7-a7a1-f019f5a57138}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualUINT : BOOL
+VAR_INPUT
+	nExpected	: UINT;
+	nActual		: UINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'UINT');
+	AreEqualUINT := FALSE;
+ELSE
+	AreEqualUINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualULINT" Id="{1cea6302-03cd-47bd-b83e-c1e0180f9af2}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualULINT : BOOL
+VAR_INPUT
+	nExpected	: ULINT;
+	nActual		: ULINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'ULINT');
+	AreEqualULINT := FALSE;
+ELSE
+	AreEqualULINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualUSINT" Id="{81d36fe2-891c-44ee-aea7-d2fe5a62a600}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualUSINT : BOOL
+VAR_INPUT
+	nExpected	: USINT;
+	nActual		: USINT;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(TO_STRING(nActual), TO_STRING(nExpected), '', sMessage, 'USINT');
+	AreEqualUSINT := FALSE;
+ELSE
+	AreEqualUSINT := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AreEqualWORD" Id="{4fbed08b-bb07-4a74-a61c-a264c218851b}">
+      <Declaration><![CDATA[METHOD PUBLIC AreEqualWORD : BOOL
+VAR_INPUT
+	nExpected	: WORD;
+	nActual		: WORD;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nExpected <> nActual) THEN
+	PrintFailed(CONCAT('16#', DWORD_TO_HEXSTR(TO_DWORD(nActual), 8, FALSE)),
+				CONCAT('16#', DWORD_TO_HEXSTR(TO_DWORD(nExpected), 8, FALSE)),
+				'',
+				sMessage,
+				'WORD');
+	AreEqualWORD := FALSE;
+ELSE
+	AreEqualWORD := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{5606c8dc-7239-4f13-999c-021a852b6d7d}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	sInstanceName : STRING(255);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^.sInstanceName := sInstanceName;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="IsFalse" Id="{deea76ee-8451-4c7b-894e-a8ceef3ea32d}">
+      <Declaration><![CDATA[METHOD PUBLIC IsFalse : BOOL
+VAR_INPUT
+	bCondition	: BOOL;
+	sMessage	: STRING(80);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF bCondition THEN
+	PrintFailed(BOOL_TO_STRING(bCondition), 'FALSE', '', sMessage, 'BOOL');
+	IsFalse := FALSE;
+ELSE
+	IsFalse := TRUE;
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="IsTrue" Id="{6b6647f6-5e4b-473e-8c17-b4dadfd0f227}">
+      <Declaration><![CDATA[METHOD PUBLIC IsTrue : BOOL
+VAR_INPUT
+	bCondition	: BOOL;
+	sMessage	: STRING(80);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (NOT bCondition) THEN
+	PrintFailed(TO_STRING(bCondition), 'TRUE', '', sMessage, 'BOOL');
+	IsTrue := FALSE;
+ELSE
+	IsTrue := TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="MultipleLog" Id="{adc176e8-8bdb-49ef-8ec2-eb439373a713}">
+      <Declaration><![CDATA[{attribute 'monitoring':='call'}
+PROPERTY PUBLIC MultipleLog : BOOL]]></Declaration>
+      <Set Name="Set" Id="{58253ec5-6334-4059-9bae-8beb4b72faac}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[THIS^.bMultipleLogFlag := MultipleLog;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="PrintFailed" Id="{f06f6cd0-e3ef-4952-980e-82db05199b52}">
+      <Declaration><![CDATA[METHOD PUBLIC PrintFailed
+VAR_INPUT
+	sActual		: STRING(80);
+	sExpected	: STRING(80);
+	sTolerance	: STRING(80);
+	sMessage	: STRING(80);
+	sType		: STRING(20);
+END_VAR
+VAR
+	sState		: STRING(10);
+	sString		: STRING(255);
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF ((THIS^.sLastMessage <> sMessage) OR (THIS^.nLastState <> THIS^.nState) OR THIS^.bMultipleLogFlag) THEN
+	THIS^.sLastInstance := THIS^.sInstanceName;
+	THIS^.sLastMessage := sMessage;
+	THIS^.nLastState := THIS^.nState;
+	
+	sString := THIS^.sInstanceName;
+
+	sState := DWORD_TO_HEXSTR(TO_DWORD(THIS^.nState), 4, FALSE);
+	
+	sString := CONCAT(sString, '; State: 16#');
+	sString := CONCAT(sString, sState);
+	
+	IF (LEN(sType) > 0) THEN
+		sString := CONCAT(sString, '; ');
+		sString := CONCAT(sString, sType);
+	END_IF
+	
+	IF (LEN(sMessage) > 0) THEN
+		sString := CONCAT(sString, '; ');
+		sString := CONCAT(sString, sMessage);
+	END_IF
+	
+	IF (LEN(sActual) > 0) THEN
+		sString := CONCAT(sString, '; Act: ');
+		sString := CONCAT(sString, sActual);
+	END_IF
+	
+	IF (LEN(sExpected) > 0) THEN
+		sString := CONCAT(sString, '; Exp: ');
+		sString := CONCAT(sString, sExpected);
+	END_IF
+	
+	IF (LEN(sTolerance) > 0) THEN
+		sString := CONCAT(sString, '; Tol: ');
+		sString := CONCAT(sString, sTolerance);
+	END_IF
+	
+	ADSLOGSTR(msgCtrlMask := ADSLOG_MSGTYPE_ERROR, msgFmtStr := 'Failed: %s', strArg := sString);					
+				
+	IF (THIS^.bAbortAfterFailFlag) THEN
+		THIS^.bAbort := TRUE;
+	END_IF
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="PrintPassed" Id="{0299393b-cb5c-461d-85b2-7dc1f6aae01c}">
+      <Declaration><![CDATA[METHOD PUBLIC PrintPassed
+VAR_INPUT
+	sMessage	: STRING(80);
+END_VAR
+VAR
+	sState		: STRING(10);
+	sString		: STRING(255);	
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF ((THIS^.sLastMessage <> sMessage) OR (THIS^.nLastState <> THIS^.nState) OR THIS^.bMultipleLogFlag) THEN
+	THIS^.sLastInstance := THIS^.sInstanceName;
+	THIS^.sLastMessage := sMessage;
+	THIS^.nLastState := THIS^.nState;
+	
+	sString := THIS^.sInstanceName;
+
+	sState := DWORD_TO_HEXSTR(TO_DWORD(THIS^.nState), 4, FALSE);
+	
+	sString := CONCAT(sString, '; State: 16#');
+	sString := CONCAT(sString, sState);
+		
+	IF (LEN(sMessage) > 0) THEN
+		sString := CONCAT(sString, '; ');
+		sString := CONCAT(sString, sMessage);
+	END_IF
+		
+	ADSLOGSTR(msgCtrlMask := ADSLOG_MSGTYPE_WARN, msgFmtStr := 'Passed: %s', strArg := sString);
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="State" Id="{776f71a8-f8f1-4331-b1fe-2c42a22c0b57}">
+      <Declaration><![CDATA[PROPERTY PUBLIC State : UDINT]]></Declaration>
+      <Get Name="Get" Id="{19bef539-a8e7-438b-bb9d-b43dcf94d6ac}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[State := THIS^.nState;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{a8011dab-8ec1-4daf-9259-f807ecc0e996}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IF (THIS^.bAbort) THEN
+	THIS^.nState := 16#FFFF;
+ELSE
+	THIS^.nState := LIMIT(0, State, 16#FFFF);
+END_IF]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="StateMachineError" Id="{5baeb024-277b-48d8-b4b4-7c6fea616640}">
+      <Declaration><![CDATA[METHOD PUBLIC StateMachineError : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[PrintFailed('', '', '', 'Invalid State!', 'StateMachine');
+THIS^.nState := 16#FFFF;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Assert">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AbortAfterFail.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualBOOL">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualBYTE">
+      <LineId Id="3" Count="1" />
+      <LineId Id="6" Count="1" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="10" Count="2" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualDINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualDWORD">
+      <LineId Id="3" Count="1" />
+      <LineId Id="6" Count="6" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualGUID">
+      <LineId Id="3" Count="10" />
+      <LineId Id="19" Count="2" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualHRESULT">
+      <LineId Id="3" Count="1" />
+      <LineId Id="6" Count="6" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualLINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualLREAL">
+      <LineId Id="3" Count="19" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualLTIME">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualLWORD">
+      <LineId Id="3" Count="1" />
+      <LineId Id="6" Count="6" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualMEM">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualREAL">
+      <LineId Id="3" Count="19" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualSINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualSTRING">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualTIME">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualUDINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualUINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualULINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualUSINT">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.AreEqualWORD">
+      <LineId Id="3" Count="1" />
+      <LineId Id="6" Count="6" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.FB_init">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.IsFalse">
+      <LineId Id="10" Count="4" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="15" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.IsTrue">
+      <LineId Id="3" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.MultipleLog.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.PrintFailed">
+      <LineId Id="5" Count="0" />
+      <LineId Id="34" Count="1" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="36" Count="32" />
+      <LineId Id="32" Count="1" />
+      <LineId Id="15" Count="2" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.PrintPassed">
+      <LineId Id="17" Count="2" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="20" Count="7" />
+      <LineId Id="33" Count="4" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="6" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.State.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.State.Set">
+      <LineId Id="5" Count="3" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Assert.StateMachineError">
+      <LineId Id="2" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
