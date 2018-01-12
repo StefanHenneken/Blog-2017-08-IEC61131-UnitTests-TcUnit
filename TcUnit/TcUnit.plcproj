@@ -26,7 +26,7 @@
     <Placeholder>TcUnit</Placeholder>
     <Company>TcUnit</Company>
     <CombineIds>false</CombineIds>
-    <ProjectVersion>0.0.0.1</ProjectVersion>
+    <ProjectVersion>0.0.0.2</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="GVLs" />
