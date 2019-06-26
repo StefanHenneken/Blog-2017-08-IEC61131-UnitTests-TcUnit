@@ -10,6 +10,14 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# TwinCAT
+_CompileInfo
+_Libraries
+_Boot
+*.tpy
+*.compiled-library
+*.project.~u
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
